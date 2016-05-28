@@ -1,8 +1,9 @@
 {
-  "name": "typo3/template_engine_smarty",
-  "type": "library",
+  "name": "pgu/template_engine_smarty",
+  "type": "typo3-cms-extension",
   "description": "Smarty - the compiling PHP template engine for typo3",
-  "keywords": ["templating"],
+  "license": ["GPL-2.0+"],
+  "keywords": ["TYPO3 CMS","templating","smarty"],
   "authors": [
     {
       "name": "Patrick Günther",
