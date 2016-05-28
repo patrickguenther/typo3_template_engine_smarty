@@ -1,0 +1,21 @@
+{
+  "name": "typo3/template_engine_smarty",
+  "type": "library",
+  "description": "Smarty - the compiling PHP template engine for typo3",
+  "keywords": ["templating"],
+  "authors": [
+    {
+      "name": "Patrick Günther",
+      "email": "p.guenther86@googlemail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.2",
+    "smarty/smarty": ">=3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pgu\\TemplateEngineSmarty\\": "Classes/"
+    }
+  }
+}
