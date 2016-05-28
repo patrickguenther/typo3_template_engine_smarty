@@ -4,6 +4,7 @@
   "description": "Smarty - the compiling PHP template engine for typo3",
   "license": ["GPL-2.0+"],
   "keywords": ["TYPO3 CMS","templating","smarty"],
+  "version": "0.0.1",
   "authors": [
     {
       "name": "Patrick Günther",
