@@ -45,5 +45,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# composer dependency directory
+# composer
 vendor/
+composer.lock
