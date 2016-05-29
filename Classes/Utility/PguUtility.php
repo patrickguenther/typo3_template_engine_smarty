@@ -75,6 +75,8 @@ class PguUtility {
 			$lang = self::getTypoScriptFrontendController()->sys_language_isocode;
 			$res->init($lang);
 		}
+		$lang = self::getTypoScriptFrontendController()->sys_language_isocode;
+		$res->init($lang);
 		return $res;
 	}
 }

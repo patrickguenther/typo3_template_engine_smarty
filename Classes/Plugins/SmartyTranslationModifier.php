@@ -1,5 +1,5 @@
 <?php
-namespace Pgu\TemplateEngineSmarty\SmartyPlugins;
+namespace Pgu\TemplateEngineSmarty\Plugins;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -33,11 +33,10 @@ class SmartyTranslationModifier extends AbstractSmartyModifier {
 	 */
 	private $languageService = null;
 	
-	public function injectSmarty(SmartyTemplateEngine $smarty)
-	{
-		parent::injectSmarty($smarty);
+	public function __construct(SmartyTemplateEngine $smarty) {
+		parent::__construct($smarty);
 		$extKey = $smarty->getExtensionKey();
-		$langFile = GeneralUtility::getFileAbsFileName('EXT:' . $extKey . 'Resources/Private/Language/locallang.xlf');
+		$langFile = GeneralUtility::getFileAbsFileName('EXT:' . $extKey . '/Resources/Private/Language/locallang.xlf');
 		$this->languageService = PguUtility::getLanguageService();
 		if(file_exists($langFile)) {
 			$this->languageService->includeLLFile($langFile, true);
@@ -45,6 +44,6 @@ class SmartyTranslationModifier extends AbstractSmartyModifier {
 	}
 
 	public function translate($value) {
-		$this->languageService->getLL($value);
+		return $this->languageService->getLL($value);
 	}
 }

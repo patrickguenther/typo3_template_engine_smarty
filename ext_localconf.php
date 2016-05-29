@@ -25,9 +25,18 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['ContentObjects']['SMARTYTEMPLATE'] =
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY] = array();
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['modifier'] = array(
-	'i18n' => \Pgu\TemplateEngineSmarty\SmartyPlugins\SmartyTranslationModifier::class
+	'i18n' => \Pgu\TemplateEngineSmarty\Plugins\SmartyTranslationModifier::class
 );
 
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['resourceHandler'] = array(
 	'EXT' => \Pgu\TemplateEngineSmarty\ResourceHandler\ExtResourceHandler::class
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['functions'] = array(
+	'typoImage' => \Pgu\SmartyTemplateEngine\Functions\TypoImageFunction::class
+);
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['blocks'] = array(
+	'typoLink' => \Pgu\TemplateEngineSmarty\Blocks\TypoLink::class
+);
+

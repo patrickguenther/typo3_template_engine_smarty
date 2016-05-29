@@ -17,6 +17,7 @@ namespace Pgu\TemplateEngineSmarty\Engine;
 
 use Pgu\TemplateEngineSmarty\ResourceHandler\DefaultTemplateHandler;
 use Pgu\TemplateEngineSmarty\SmartyPlugins\AbstractSmartyModifier;
+use Pgu\TemplateEngineSmarty\Utility\PguUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class SmartyTemplateEngine extends \Smarty {
@@ -51,12 +52,31 @@ class SmartyTemplateEngine extends \Smarty {
 	{
 		foreach($this->config['modifier'] as $pluginName => $pluginClass) {
 			/** @var AbstractSmartyModifier $plugin */
-			$plugin = GeneralUtility::makeInstance($pluginClass);
+			$plugin = GeneralUtility::makeInstance($pluginClass, $this);
 			$this->registerPlugin(
 				'modifier',
 				$pluginName,
 				array($plugin, $plugin->getMethodName())
 			);
+		}
+	}
+	
+	private function registerFunctions()
+	{
+		foreach($this->config['functions'] as $functionName => $functionClass) {
+			$functor = GeneralUtility::makeInstance($functionClass, $this);
+			$this->registerPlugin(
+				'function',
+				$functionName,
+				array($functor, 'execute')
+			);
+		}
+	}
+
+	private function initBlocks() {
+		foreach($this->config['blocks'] as $blockName => $blockClass) {
+			$block = GeneralUtility::makeInstance($blockClass, $this);
+			$this->registerPlugin('block', $blockName, array($block, 'evalBlock'));
 		}
 	}
 	
@@ -69,7 +89,9 @@ class SmartyTemplateEngine extends \Smarty {
 		$compileDir = $tmpPath . 'compile/' . $extKey;
 		foreach(array($cacheDir, $compileDir) as $dir) {
 			if(!file_exists($dir)) {
+				$old = umask(0);
 				mkdir($dir, 0775, true);
+				umask($old);
 			}
 			elseif(!is_dir($dir)) {
 				throw new \SmartyException('There is a file blocking one of the directories smarty wants to create');
@@ -82,6 +104,8 @@ class SmartyTemplateEngine extends \Smarty {
 
 		$this->registerResourceHandler();
 		$this->initPlugins();
+		$this->registerFunctions();
+		$this->initBlocks();
 		$this->pluginsInitialized = true;
 	}
 

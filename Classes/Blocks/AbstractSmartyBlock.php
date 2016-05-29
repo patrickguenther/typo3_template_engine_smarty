@@ -1,6 +1,6 @@
 <?php
 
-namespace Pgu\TemplateEngineSmarty\SmartyPlugins;
+namespace Pgu\TemplateEngineSmarty\Blocks;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -19,28 +19,19 @@ use Pgu\TemplateEngineSmarty\Engine\SmartyTemplateEngine;
 /**
  * Created by PhpStorm.
  * User: patrick
- * Date: 5/27/16
- * Time: 6:45 PM
+ * Date: 5/29/16
+ * Time: 5:08 PM
  */
 
-abstract class AbstractSmartyModifier {
+abstract class AbstractSmartyBlock {
 	/**
-	 * @var SmartyTemplateEngine
+	 * @var null|SmartyTemplateEngine
 	 */
 	protected $smarty = null;
 
-	protected $methodName = 'modify';
-
-	public function __construct() {}
-
-	public function injectSmarty(SmartyTemplateEngine $smarty) {
+	public function __construct(SmartyTemplateEngine $smarty) {
 		$this->smarty = $smarty;
 	}
-
-	public function getMethodName() {
-		if(!method_exists($this, $this->methodName)) {
-			throw new \SmartyException('Method ' . $this->methodName . ' does not exist.');
-		}
-		return $this->methodName;
-	}
+	
+	abstract public function evalBlock($params, $content, \Smarty_Internal_Template &$smarty, &$repeat);
 }
