@@ -1,4 +1,4 @@
-.. include::../includes.rst
+.. include:: ../Includes.rst
 
 Templating
 ==========
