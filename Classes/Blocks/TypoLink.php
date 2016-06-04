@@ -43,7 +43,7 @@ class TypoLink extends AbstractSmartyBlock {
 		}
 
 		if(!isset($params['href'])) {
-			throw new \SmartyException('Required parameter "parameter" missing.');
+			throw new \SmartyException('Required parameter "href" missing.');
 		}
 
 		$url = $this->cObj->getTypoLink_URL($params['href']);
