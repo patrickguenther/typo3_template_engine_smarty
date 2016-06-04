@@ -9,11 +9,11 @@ $EM_CONF[$_EXTKEY] = array(
 			'php' => '5.3.0-7.9.99'
 		)
 	),
-	'state' => 'experimental',
+	'state' => 'alpha',
 	'author' => 'Patrick Günther',
 	'author_email' => 'p.guenther86@googlemail.com',
 	'author_company' => '',
-	'version' => '0.0.1',
+	'version' => '0.9.1',
 	'autoload' => array(
 		'classmap' => array('vendor/smarty/smarty/', 'Classes')
 	)
