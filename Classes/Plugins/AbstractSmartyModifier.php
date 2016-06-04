@@ -16,13 +16,6 @@ namespace Pgu\TemplateEngineSmarty\Plugins;
  */
 use Pgu\TemplateEngineSmarty\Engine\SmartyTemplateEngine;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/27/16
- * Time: 6:45 PM
- */
-
 abstract class AbstractSmartyModifier {
 	/**
 	 * @var SmartyTemplateEngine

@@ -4,10 +4,11 @@ Smarty Template Engine
 ======================
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :titlesonly:
     :glob:
 
+    Installation/index
     ContentObject/index
     SmartyView/index
     templating/index

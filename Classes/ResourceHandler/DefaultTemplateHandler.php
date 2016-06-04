@@ -16,13 +16,6 @@ namespace Pgu\TemplateEngineSmarty\ResourceHandler;
  */
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/27/16
- * Time: 6:32 PM
- */
-
 class DefaultTemplateHandler {
 	private $extKey = '';
 

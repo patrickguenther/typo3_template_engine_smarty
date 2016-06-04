@@ -12,13 +12,6 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/26/16
- * Time: 8:17 PM
- */
-
 $GLOBALS['TYPO3_CONF_VARS']['FE']['ContentObjects']['SMARTYTEMPLATE'] =
 	'Pgu\\TemplateEngineSmarty\\ContentObjects\\SmartyTemplateContentObject';
 

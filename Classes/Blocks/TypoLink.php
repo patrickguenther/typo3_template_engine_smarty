@@ -18,13 +18,6 @@ use Pgu\TemplateEngineSmarty\Engine\SmartyTemplateEngine;
 use Pgu\TemplateEngineSmarty\Utility\PguUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/29/16
- * Time: 5:11 PM
- */
-
 class TypoLink extends AbstractSmartyBlock {
 	/**
 	 * @var ContentObjectRenderer $cObj

@@ -19,13 +19,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\AbstractContentObject;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/26/16
- * Time: 8:03 PM
- */
-
 class SmartyTemplateContentObject extends AbstractContentObject {
 
 	/**

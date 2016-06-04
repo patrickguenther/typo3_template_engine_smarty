@@ -22,13 +22,6 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3\CMS\Lang\LanguageService;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/27/16
- * Time: 6:58 PM
- */
-
 class PguUtility {
 	/**
 	 * @return TypoScriptFrontendController $tsfe

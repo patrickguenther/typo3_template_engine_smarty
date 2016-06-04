@@ -3,10 +3,11 @@
 Templating
 ==========
 
-One powerful aspect of Smarty is, that it is easily extensible  with modifier, function and blockfunction plugins and
+One powerful aspect of Smarty is, that it is easily extensible with modifier, function and blockfunction plugins and
 resource handlers.
 
-Feel free to add your own Smarty plugins to the TYPO3_CONF_VARS-Array to either of the following
+Feel free to add your own Smarty plugins to the TYPO3_CONF_VARS-Array to either of the following array keys in your
+localconf.php:
 
 .. code-block:: php
 
@@ -15,12 +16,12 @@ Feel free to add your own Smarty plugins to the TYPO3_CONF_VARS-Array to either 
     $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['template_engine_smarty']['blocks']
     $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['template_engine_smarty']['resourceHandler']
 
-This extension already provides smarty plugins of each category.
+This extension already provides some smarty plugins for each these categories.
 
 
 
-Modifier
---------
+Modifiers
+---------
 
 The i18n-modifier exposes typo3's powerful translation-API to your smarty templates. By default the locallang.xlf files
 of your extension are loaded and can be used in the your templates like so:

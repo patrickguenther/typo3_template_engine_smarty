@@ -18,13 +18,6 @@ use Smarty_Template_Source;
 use SmartyException;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/27/16
- * Time: 12:00 AM
- */
-
 class ExtResourceHandler extends \Smarty_Resource {
 
 	/**

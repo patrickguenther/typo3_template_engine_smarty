@@ -16,13 +16,6 @@ namespace Pgu\TemplateEngineSmarty\Blocks;
  */
 use Pgu\TemplateEngineSmarty\Engine\SmartyTemplateEngine;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/29/16
- * Time: 5:08 PM
- */
-
 abstract class AbstractSmartyBlock {
 	/**
 	 * @var null|SmartyTemplateEngine

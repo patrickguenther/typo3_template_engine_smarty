@@ -18,13 +18,6 @@ use Pgu\TemplateEngineSmarty\Utility\PguUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Lang\LanguageService;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/27/16
- * Time: 6:44 PM
- */
-
 class SmartyTranslationModifier extends AbstractSmartyModifier {
 	protected $methodName = 'translate';
 

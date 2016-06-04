@@ -21,13 +21,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\ImageContentObject;
 
-/**
- * Created by PhpStorm.
- * User: patrick
- * Date: 5/28/16
- * Time: 7:51 PM
- */
-
 class TypoImageFunction extends AbstractSmartyFunction {
 	/** @var  ContentObjectRenderer */
 	private $cObj;
