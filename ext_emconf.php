@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author' => 'Patrick Günther',
 	'author_email' => 'p.guenther86@googlemail.com',
 	'author_company' => '',
-	'version' => '0.9.1',
+	'version' => '0.9.2',
 	'autoload' => array(
 		'classmap' => array('vendor/smarty/smarty/', 'Classes')
 	)
