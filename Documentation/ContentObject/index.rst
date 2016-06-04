@@ -6,7 +6,8 @@ Content Object
 You can use the smarty template engine in TypoScript setup for rendering definitions of content objects or for the page
 layout.
 
-:ts:`
+::
+
     page = PAGE
     page.10 = SMARTYTEMPLATE
     page.10 {
@@ -22,6 +23,5 @@ layout.
         }
       }
     }
-    `
 
 With that definition of your page object, you can use :smarty:`{$content}` to display the page content.

@@ -10,6 +10,7 @@ Smarty Template Engine
 
     ContentObject/index
     SmartyView/index
+    templating/index
 
 Introduction
 ------------

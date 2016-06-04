@@ -7,4 +7,6 @@ The extension provides the SmartyView class, which implements extbase's ViewInte
 extbase plugins. Simply set the protected property :php:`$defaultViewObjectName` of your ActionController to
 :php:`Pgu\View\SmartyView\SmartyView::class`. The default template name of the current action should be located here:
 
-:code:`<extensionDirectory>/Resources/Private/Templates/<controllerName>/<actionName>.tpl`
+::
+
+    <extensionDirectory>/Resources/Private/Templates/<controllerName>/<actionName>.tpl
