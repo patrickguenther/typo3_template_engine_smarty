@@ -32,6 +32,7 @@ layout.
     Description
         Each of the array keys will be accessible as a template variable. The variable's value will be the rendered
         Content object.
+
 ::
 
     page = PAGE

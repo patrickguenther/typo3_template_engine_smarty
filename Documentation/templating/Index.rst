@@ -28,7 +28,7 @@ of your extension are loaded and can be used in the your templates like so:
 
 .. code-block:: smarty
 
-{'your.index'|i18n}
+	{'your.index'|i18n}
 
 Functions
 ---------
